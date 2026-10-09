@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-display: 'Fredoka', sans-serif;
+  --font-sans: 'Nunito', sans-serif;
+
+  --color-pitch-blue: #2FA8E0;
+  --color-team-purple: #7B4FB8;
+  --color-team-turq: #1FB5B0;
+  
+  --color-amber: #F5A524;
+  --color-cream: #FFF1C9;
+  --color-dark-brown: #3E2A2A;
+  
+  --color-success: #2FB360;
+  --color-error: #E5484D;
+  --color-warning: #F2B01E;
+  --color-info: #3B82F6;
+  
+  /* Adding slightly darker variants for interaction states */
+  --color-team-purple-dark: #633E96;
+  --color-team-turq-dark: #19948F;
+  --color-pitch-blue-dark: #2384B2;
+}
+
+@layer utilities {
+  .border-heavy {
+    border-width: 3px;
+    border-color: var(--color-dark-brown);
+  }
+  
+  .shadow-solid {
+    box-shadow: 0px 4px 0px 0px var(--color-dark-brown);
+  }
+  
+  .shadow-solid-hover {
+    box-shadow: 0px 2px 0px 0px var(--color-dark-brown);
+    transform: translateY(2px);
+  }
+  
+  .shadow-solid-active {
+    box-shadow: 0px 0px 0px 0px var(--color-dark-brown);
+    transform: translateY(4px);
+  }
+  
+  .shadow-diffuse {
+    box-shadow: 0px 12px 24px -4px rgba(62,42,42,0.15);
+  }
+
+  .pitch-pattern {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), 
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-gray-50);
+    color: var(--color-dark-brown);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes bobble {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(-3deg); }
+  75% { transform: translateY(-2px) rotate(3deg); }
+}
+
+.animate-bobble {
+  animation: bobble 3s infinite ease-in-out;
+}
