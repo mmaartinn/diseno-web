@@ -132,18 +132,18 @@ export default function App() {
       <nav className="w-64 fixed h-screen overflow-y-auto border-r-heavy bg-white p-8 flex flex-col gap-6 z-50">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 bg-pitch-blue rounded-xl border-heavy shadow-solid flex items-center justify-center text-white font-bold animate-bobble">
-            B
+            DCC
           </div>
-          <h1 className="font-display font-bold text-xl leading-tight tracking-tight">Bobble<br/>League</h1>
+          <h1 className="font-display font-bold text-xl leading-tight tracking-tight">DCCorner</h1>
         </div>
         
         <div className="flex flex-col gap-3 font-semibold">
-          <a href="#cover" className="hover:text-pitch-blue transition-colors">1. Cover</a>
+          <a href="#cover" className="hover:text-pitch-blue transition-colors">1. Documento de Diseño</a>
           <a href="#logo" className="hover:text-pitch-blue transition-colors">2. Logo</a>
-          <a href="#colors" className="hover:text-pitch-blue transition-colors">3. Colors</a>
-          <a href="#typography" className="hover:text-pitch-blue transition-colors">4. Typography</a>
-          <a href="#components" className="hover:text-pitch-blue transition-colors">5. Base Components</a>
-          <a href="#application" className="hover:text-pitch-blue transition-colors">6. Design Application</a>
+          <a href="#colors" className="hover:text-pitch-blue transition-colors">3. Colores</a>
+          <a href="#typography" className="hover:text-pitch-blue transition-colors">4. Tipografía</a>
+          <a href="#components" className="hover:text-pitch-blue transition-colors">5. Componentes base</a>
+          <a href="#application" className="hover:text-pitch-blue transition-colors">6. Aplicación del Diseño (Ejemplo)</a>
         </div>
       </nav>
 
@@ -151,19 +151,19 @@ export default function App() {
       <main className="ml-64 flex-1 p-16 max-w-6xl">
         
         {/* 1. Cover */}
-        <Section id="cover" title="Visual Identity Document">
+        <Section id="cover" title="1. Documento de Diseño">
           <div className="bg-cream border-heavy rounded-[32px] p-12 shadow-diffuse relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-4 bg-amber"></div>
-            <h1 className="font-display text-7xl font-bold mb-4 mt-4">Bobble League</h1>
-            <p className="text-2xl font-semibold opacity-70 mb-12">Tactical 3D Turn-based Football</p>
+            <h1 className="font-display text-7xl font-bold mb-4 mt-4">DCCorner</h1>
+            <p className="text-2xl font-semibold opacity-70 mb-12">Juego de Fútbol Táctico 3D</p>
             
             <div className="flex gap-8">
               <div>
-                <div className="text-sm font-bold opacity-50 uppercase tracking-widest mb-1">Version</div>
+                <div className="text-sm font-bold opacity-50 uppercase tracking-widest mb-1">Versión</div>
                 <div className="font-bold text-xl">v1.0</div>
               </div>
               <div>
-                <div className="text-sm font-bold opacity-50 uppercase tracking-widest mb-1">Date</div>
+                <div className="text-sm font-bold opacity-50 uppercase tracking-widest mb-1">Fecha</div>
                 <div className="font-bold text-xl">{new Date().toLocaleDateString()}</div>
               </div>
             </div>
@@ -178,30 +178,32 @@ export default function App() {
         </Section>
 
         {/* 2. Logo */}
-        <Section id="logo" title="Logo & Branding">
+        <Section id="logo" title="2. Logo">
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div className="bg-white border-heavy rounded-3xl p-12 flex flex-col items-center justify-center gap-6 shadow-solid">
               <div className="text-sm font-bold opacity-50 uppercase tracking-widest w-full text-left">Primary (Horizontal)</div>
               
-              {/* Logo construction */}
+              {/* ISOTIPO INICIO*/}
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-pitch-blue rounded-full border-heavy shadow-solid flex items-center justify-center relative animate-bobble">
-                  {/* Stylized soccer ball + arrow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-4 border-white"></div>
                   <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-l-[12px] border-l-amber border-b-8 border-b-transparent"></div>
                 </div>
-                <div className="font-display font-bold text-5xl tracking-tight text-dark-brown">Bobble League</div>
+              {/* ISOTIPO FIN */}
+                <div className="font-display font-bold text-5xl tracking-tight text-dark-brown">DCCorner</div>
               </div>
             </div>
 
             <div className="bg-pitch-blue border-heavy rounded-3xl p-12 flex flex-col items-center justify-center gap-6 shadow-solid text-white">
               <div className="text-sm font-bold opacity-50 uppercase tracking-widest w-full text-left">On Dark/Brand Background</div>
+              {/* ISOTIPO INICIO*/}
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-white rounded-full border-heavy shadow-solid flex items-center justify-center relative animate-bobble">
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-4 border-pitch-blue"></div>
                   <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-l-[12px] border-l-amber border-b-8 border-b-transparent"></div>
                 </div>
-                <div className="font-display font-bold text-5xl tracking-tight text-white drop-shadow-md">Bobble League</div>
+              {/* ISOTIPO FIN */}
+                <div className="font-display font-bold text-5xl tracking-tight text-white drop-shadow-md">DCCorner</div>
               </div>
             </div>
           </div>
@@ -212,7 +214,7 @@ export default function App() {
         </Section>
 
         {/* 3. Colors */}
-        <Section id="colors" title="Color Palette">
+        <Section id="colors" title="3. Colores">
           <h3 className="font-display text-2xl font-bold mb-4">Primary (Pitch & Teams)</h3>
           <div className="grid grid-cols-3 gap-6 mb-12">
             <Swatch name="Pitch Blue" hex="#2FA8E0" bgClass="bg-pitch-blue" />
@@ -237,7 +239,7 @@ export default function App() {
         </Section>
 
         {/* 4. Typography */}
-        <Section id="typography" title="Typography Hierarchy">
+        <Section id="typography" title="4. Tipografía">
           <div className="bg-white border-heavy rounded-[32px] p-12 shadow-solid mb-8">
             <div className="grid grid-cols-[1fr_2fr] gap-12 items-start">
               <div>
@@ -258,7 +260,7 @@ export default function App() {
           <div className="flex flex-col gap-8 bg-white border-heavy rounded-[32px] p-12 shadow-solid">
             <div className="grid grid-cols-[150px_1fr] items-baseline border-b-2 border-gray-100 pb-4">
               <span className="font-bold opacity-50">Display</span>
-              <span className="font-display text-6xl font-bold">Victory! 3 - 1</span>
+              <span className="font-display text-6xl font-bold">Victoria! 3 - 1</span>
             </div>
             <div className="grid grid-cols-[150px_1fr] items-baseline border-b-2 border-gray-100 pb-4">
               <span className="font-bold opacity-50">Heading 1</span>
@@ -280,7 +282,7 @@ export default function App() {
         </Section>
 
         {/* 5. Base Components */}
-        <Section id="components" title="Base Components">
+        <Section id="components" title="5. Componentes base">
           <div className="grid grid-cols-2 gap-12">
             
             {/* Buttons */}
@@ -329,9 +331,9 @@ export default function App() {
         </Section>
 
         {/* 6. Application Example */}
-        <Section id="application" title="Design Application (Window Example)">
+        <Section id="application" title="6. Aplicación del Diseño (Ejemplo)">
           <p className="mb-8 font-semibold max-w-3xl">
-            This demonstrates how the variables, styles, and components come together to form an interactive surface (e.g., a "Find Match" modal). Notice the thick borders, playful rounded corners, solid shadows, and the pitch-patterned background inside the content area.
+            Este es un ejemplo genérico de cómo se verían los elementos dentro de la interfaz del usuario.
           </p>
 
           <div className="bg-white border-heavy rounded-[32px] shadow-diffuse p-8 flex items-center justify-center min-h-[600px] relative overflow-hidden bg-gray-100">
